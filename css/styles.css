@@ -36,6 +36,10 @@
   --bgcolor-button-filter: #f5f4fa;
   --bgcolor-button-filter-hover: #2196f3;
 
+  /* FORM COLORS * - additional */
+  --font-color-placeholder-footer: #ffffff99;
+
+
   /* BORDERS */
   --border-header: 1px solid #ececec;
   --border-porfolio-items: 1px solid #eeeeee;
@@ -55,7 +59,41 @@
   --shadow-modal: 0px 1px 3px rgba(0, 0, 0, 0.12),
   0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
+ 
 
+  /* --font-color-form-contact:#757575; = font-color-sec */
+ /* --font-color-form-link:#2196f3; - font-color-hover */
+
+ /* --font-color-form-terms:#757575; = font-color-sec */
+
+ 
+
+ /* PLACEHOLDER COLORS */
+ /* --font-color-form-placeholder: #75757580; = font-color-form-placeholder */
+
+ /* --font-color-placeholder-footer: #ffffff99; = font-color-placeholder-footer */
+
+ /* | SVG COLORS */
+ /* --svg-fill-contact: #757575; font-color-sec */
+/* --svg-fill-contact-hover: #2196f3; font-color-hover */
+/* 
+ --svg-fill-skill: #212121; --font-color-prim
+ --svg-fill-skill-detail: #2196f3; font-color-hover
+
+ --svg-fill-social: #afb1b8; --border-client-items
+ --svg-fill-social-footer: #fff; font-color-white
+
+ --svg-fill-social-hover: #fff; font-color-white
+
+ --svg-fill-client: #afb1b8; border-client-items
+ --svg-fill-client-hover: #2196f3; font-color-hover
+
+ --svg-fill-form-contact: #212121; -font-color-prim
+ --svg-fill-skill-detail: #2196f3; font-color-hover
+ --svg-fill-form-checkmark: #fff; font-color-white
+
+ --svg-fill-form-checkmark: #fff; font-color-white
+ --svg-fill-newsletter-footer: #fff; font-color-white */
 
 /* general classes & settings*/
 h1,
@@ -580,6 +618,45 @@ body {
 }
 .footer .smedia__logo:hover {
   background-color: var(--font-color-hover);
+}
+.newsletter {
+  display: flex;
+  gap: 12px;
+}
+.newsletter__input--email {
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  color: var(--font-color-white);
+  background-color: var(--bgcolor-newsletter-footer);
+  border: var(--font-color-white);
+  border-radius: 4px;
+
+  box-shadow: var(--shadow-newsletter-footer);
+
+  transition: var(--transition-border-color);
+}
+/* --font-color-newsletter-footer: #fff; = font-color-white */
+.newsletter__input--email:focus {
+  border-color: var(--font-color-white);
+  outline: 0;
+}
+.newsletter__input--email::placeholder {
+  color: var(--font-color-placeholder-footer);
+}
+.newsletter__button {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  padding-right: 28px;
+
+  transition: var(--transition-button-primary);
+
+  white-space: nowrap;
+}
+.newsletter__svg {
+  fill: var(--svg-fill-newsletter-footer);
 }
 
 /* PORTFOLIO STYLES */
