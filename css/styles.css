@@ -1,6 +1,7 @@
-/* * {
+/* QST: czy to ma być czy już nie?
+* {
   box-sizing: border-box;
-} */
+}  */
 
 
 /* setting up variables - fonts & colors' panels */
@@ -45,10 +46,12 @@
   --border-porfolio-items: 1px solid #eeeeee;
   --border-client-items: 1px solid #afb1b8;
   --border-client-items-hover: 1px solid #2196f3;
+  --border-newsletter-footer: 1px solid rgba(255, 255, 255, 0.3);
 
   /* SHADOWS */
   --shadow-team: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    --shadow-newsletter-footer: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   /* SHADOW BUTTONS */
   --shadow-button: 0px 4px 4px 0px #00000026;
@@ -58,6 +61,7 @@
     0px 4px 4px 0px #0000000f, 0px 1px 1px 0px #0000001f;
   --shadow-modal: 0px 1px 3px rgba(0, 0, 0, 0.12),
   0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  
 }
  
 
@@ -71,7 +75,7 @@
  /* PLACEHOLDER COLORS */
  /* --font-color-form-placeholder: #75757580; = font-color-form-placeholder */
 
- /* --font-color-placeholder-footer: #ffffff99; = font-color-placeholder-footer */
+ 
 
  /* | SVG COLORS */
  /* --svg-fill-contact: #757575; font-color-sec */
@@ -108,7 +112,6 @@ ul {
 .container {
   margin: 0 auto;
   max-width: 1200px;
-  /* justify-content: center; */
 }
 .section {
   padding: 94px 0;
@@ -141,8 +144,6 @@ ul {
   border-radius: 4px;
   box-shadow: var(--shadow-modal);
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* display:flex;
-  align-items: flex-start; */
 }
 
 .is-hidden {
@@ -168,35 +169,23 @@ ul {
 
 /* TRANSITIONS */
 /* transition: [property] [duration] [timing-function] [delay] */
-/* --transition-color: color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
-/* --transition-bgcolor: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
-/* --transition-shadow: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); */
-/*--transition-transform: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);*/
-/*--transition-border-color: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);*/
-/*--transition-fill: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); */
-/* --tranasition-modal: transform 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
-  border-radius 1000ms linear, visibility 300ms linear, opacity 500ms ease; */
-
 
 /* PSEUDOCLASSES */
 .hover:hover,
 .hover:focus-visible {
   background-color: var(--bgcolor-button-filter-hover);
-  /* transition: var(--transition-bgcolor); */
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--font-color-white);
-  /* transition: var(--transition-color); */
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: var(--shadow-button-menu-hover);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* transition: var(--transition-bgcolor), var(--transition-color), var(--transition-shadow); 
-  -DLACZEGO TO NIE DZIAŁA??*/
 }
 .banner__button:hover,
 .banner__button:focus-visible {
   background-color: var(--bgcolor-button-banner-hover);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .link--hover:hover,
 .link--hover:focus-visible {
   color: var(--font-color-contact-footer);
@@ -244,15 +233,14 @@ background-color: #b4c0c9;
 
 /* general body settings */
 body {
-  /* margin: 0 auto;
-  width: 1600px; a moze max-width ? */
   font-family: var(--ff);
   font-size: var(--fs);
   background-color: var(--bgcolor);
   color: var(--font-color-prim);
 }
 
-/* .contact__list,
+/* do ustawienia w SASS-scss
+.contact__list,
 .nav__list,
 .filters__list,
 .cards__list,
@@ -346,8 +334,7 @@ body {
 /* MAIN */
 /* BANNER */
 .banner {
-  /* --color-shadow: #00000040;
-  text-align: center; */
+  /* --color-shadow: #00000040; */
   color: var(--font-color-sec);
   background-color: var(--bgcolor-dark);
   background-image: linear-gradient(
@@ -363,15 +350,6 @@ body {
   max-width: 1600px;
   margin: 0 auto;
   padding: 12.5rem 0;
-  /* display: flex;
-  flex-flow: column;
-  align-items: center;
-  margin-bottom: 94px;
-  height: 600px;
-  text-align: center; 
-  justify-content: center; */
-  /* padding: 21.4vh 0; ok. 200px */
-  
 }
 /* TITLE */
 .banner__title {
@@ -391,12 +369,10 @@ body {
 /* BUTTON */
 .banner__button {
   padding: 10px 41.5px;
-  /* width: 200px;
-  height: 50px; */
   border: none;
   border-radius: 4px;
   color: var(--font-color-white);
-  font-size: 16px;
+  font-size: var(--ff);
   font-weight: 700;
   line-height: 1.875;
   letter-spacing: 0.06em;
@@ -411,11 +387,6 @@ body {
   gap: 30px;
 }
 
-/* .assets__item {
-  display: flex;
-  flex-flow: column;
-  align-items: flex-start;
-} */
 .assets__svg {
   display: flex;
   justify-content: center;
@@ -458,17 +429,12 @@ body {
   position: relative;
 }
 
-/* .scope__img{
-  position:relative;
-} */
 
 .scope__overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  /* width: 100%; */
-  /* padding: 27px 90px; */
   background-color: var(--bgcolor-scope-overlay);
 }
 .scope-overlay__title {
@@ -486,25 +452,17 @@ body {
   letter-spacing: 0.03em;
 }
 .team {
-  /* display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  height: 648px; */
   background-color: var(--bgcolor-fade);
 }
 .team__list {
   display: flex;
   flex-flow: row;
-  /* align-items: center;
-  justify-content: center; */
   gap: 30px;
 }
 .team__item {
-  /* display: flex;
-  flex-flow: column; */
   background-color: var(--bgcolor);
   box-shadow: var(--shadow-team);
+  border-radius: 0px 0px 4px 4px;
 }
 .team__img {
   margin-bottom: 30px;
@@ -514,13 +472,11 @@ body {
   font-weight: 500;
   line-height: 1.188;
   letter-spacing: 0.03em;
-  /* text-align: center; */
 }
 .team__profession {
   color: var(--font-color-sec);
   line-height: 1.188;
   letter-spacing: 0.03em;
-  /* text-align: center; */
   margin-bottom: 30px;
 }
 .smedia {
@@ -529,9 +485,7 @@ body {
   justify-content: center;
   gap: 10px;
   margin-bottom: 30px;
-  margin-top:16px;
-  /* margin: 16px 32px 30px 32px; */
-}
+  }
 .smedia__logo {
   display: flex;
   align-items: center;
@@ -559,14 +513,10 @@ body {
 
 /* FOOTER */
 .footer {
-  /* display: flex;
-  flex-flow: column;
-  height: 252px; */
   background-color: var(--bgcolor-dark);
 }
 .footer__arrange {
   display: flex;
-  /* flex-flow: column; */
   align-items: baseline;
 }
 .footer.section {
@@ -579,7 +529,6 @@ body {
   color: var(--font-color-white);
 }
 .address {
-  /* margin-left: 215px; */
   font-style: normal;
 }
 .address__list {
@@ -587,7 +536,6 @@ body {
   line-height: 1.714;
   letter-spacing: 0.03em;
   padding-inline-start: 40px;
-  /* margin-left: 215px; */
 }
 .address__link {
   color: var(--font-color-sec);
@@ -628,15 +576,12 @@ body {
   height: 50px;
   padding-left: 16px;
   color: var(--font-color-white);
-  background-color: var(--bgcolor-newsletter-footer);
-  border: var(--font-color-white);
+  background-color: var(--bgcolor-footer);
+  border: var(--border-newsletter-footer);
   border-radius: 4px;
-
   box-shadow: var(--shadow-newsletter-footer);
-
-  transition: var(--transition-border-color);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-/* --font-color-newsletter-footer: #fff; = font-color-white */
 .newsletter__input--email:focus {
   border-color: var(--font-color-white);
   outline: 0;
@@ -648,15 +593,21 @@ body {
   display: flex;
   align-items: center;
   gap: 24px;
-
-  padding-right: 28px;
-
-  transition: var(--transition-button-primary);
-
+  background: var(--bgcolor-button-banner);
+  color: var(--font-color-white);
+  /* font-size: 16px; */
+  font-weight: 700;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  padding: 10px 28px 10px 42px;
+  box-shadow: var(--shadow-newsletter-footer);
+  border:none;
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   white-space: nowrap;
 }
 .newsletter__svg {
-  fill: var(--svg-fill-newsletter-footer);
+  fill: var(--font-color-white);
 }
 
 /* PORTFOLIO STYLES */
@@ -664,7 +615,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin-bottom: 50px; */
 }
 .filters__list {
   display: flex;
@@ -681,7 +631,6 @@ body {
   margin-right: 12px;
 }
 .button__text--sec {
-  /* font-family: inherit; */
   font-weight: 500;
   line-height: 1.625;
   letter-spacing: 0.03em;
