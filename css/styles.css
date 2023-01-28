@@ -535,6 +535,9 @@ body {
 }
 
 /* CARDS */
+.cards {
+  padding-top: 50px;
+}
 .cards__list {
   display: flex;
   flex-wrap: wrap;
