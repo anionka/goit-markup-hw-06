@@ -49,9 +49,15 @@
             <div class="container">
                 <h1 class="banner__title">EFEKTYWNE ROZWIĄZANIA <br> DLA WASZEGO BIZNESU</h1>
                 <button class="banner__button" type="button" data-modal-open>Zamów usługę</button>
-        <!-- MODAL  -->
+                  <!-- MODAL  -->
                 <div class="backdrop is-hidden" data-modal>
-                  <div class="modal">
+                  <div class="modal">               
+                     <!-- modal-close-button -->
+                          <button class="modal__button--close" type="button" data-modal-close>
+                            <svg class="modal__svg-close" width="11" height="11">
+                              <use href="./images/icons.svg#icon-close"></use>
+                            </svg>
+                          </button>
         <!-- modal form -->
                     <form name="service-form" class="form">
                       <h2 class="form__title center">Zostaw swoje dane w formularzu poniżej</h2>
@@ -137,13 +143,6 @@
                       </li>
                     </ul>
                   </form>
-                  
-          <!-- modal-button -->
-                    <button class="modal__button--close" type="button" data-modal-close>
-                      <svg class="modal__svg-close" width="11" height="11">
-                        <use href="./images/icons.svg#icon-close"></use>
-                      </svg>
-                    </button>
                   </div>
                 </div>
             </div>
