@@ -18,7 +18,7 @@
   --bgcolor: #fff; /* main */
   --bgcolor-dark: #2f303a; /* 4: banner & footer */
   --bgcolor-fade: #f5f4fa; /* 4 "our team" section */
-   --bgcolor-smedia-footer: rgba(255, 255, 255, 0.1);
+  --bgcolor-smedia-footer: rgba(255, 255, 255, 0.1);
   --bgcolor-scope-overlay: #2f303acc;
   --bgcolor-card-overlay: #2196f3e5;
   --bgcolor-page-active: #2196f3;
